@@ -25,19 +25,6 @@ Serves as a transferable template for understanding technological efficiency, re
 
 - Confusion matrix heatmaps for performance insight
 
-## 🔧 How to Run
-
-- Clone the repository
-
-- Install dependencies:
-
-```bash
-  pip install pandas scikit-learn matplotlib seaborn
-
-- Open the notebook using JupyterLite or locally with Jupyter Notebook
-
-- Run cells sequentially to explore the model pipeline
-
 ## 🌱 Extension Opportunities
 
 - Adapt modeling workflow to EPA emissions data
@@ -49,3 +36,15 @@ Serves as a transferable template for understanding technological efficiency, re
 ## 🤝 Credits
 
 _Created by Kate Mason as part of a machine learning portfolio integrating technical analysis with climate-aware data interpretation._
+
+## 🔧 How to Run
+- Clone the repository
+
+- Install dependencies:
+
+```bash
+  pip install pandas scikit-learn matplotlib seaborn
+
+- Open the notebook using JupyterLite or locally with Jupyter Notebook
+
+- Run cells sequentially to explore the model pipeline
