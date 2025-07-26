@@ -1,14 +1,15 @@
-🚀 SpaceX Falcon 9 Landing Prediction
+# 🚀 SpaceX Falcon 9 Landing Prediction
 Overview
 
 This project applies machine learning techniques to predict successful landings of the SpaceX Falcon 9 first-stage booster. While rooted in aerospace, the workflow highlights data strategies that can be adapted to climate policy—such as classification modeling, feature engineering, and predictive analytics.
-🔍 Climate Relevance
+
+## 🔍 Climate Relevance
 
     Demonstrates methods relevant to greenhouse gas forecasting, transportation emissions modeling, and spatially aware policy design.
 
     Serves as a transferable template for understanding technological efficiency, resource optimization, and decision-making under uncertainty.
 
-💻 Tech Stack
+## 💻 Tech Stack
 
     Python: pandas, scikit-learn, matplotlib, seaborn
 
@@ -18,7 +19,7 @@ This project applies machine learning techniques to predict successful landings 
 
     Confusion matrix and visualizations for interpretability
 
-📊 Key Features
+## 📊 Key Features
 
     Data wrangling and preprocessing
 
@@ -30,19 +31,20 @@ This project applies machine learning techniques to predict successful landings 
 
     Confusion matrix heatmaps for performance insight
 
-🔧 How to Run
+## 🔧 How to Run
 
     Clone the repository
 
     Install dependencies:
 
-    pip install pandas scikit-learn matplotlib seaborn
+  '''bash
+  pip install pandas scikit-learn matplotlib seaborn
     
 Open the notebook using JupyterLite or locally with Jupyter Notebook
 
 Run cells sequentially to explore the model pipeline
 
-🌱 Extension Opportunities
+## 🌱 Extension Opportunities
 
     Adapt modeling workflow to EPA emissions data
 
@@ -50,6 +52,6 @@ Run cells sequentially to explore the model pipeline
 
     Extend classification to environmental outcomes (e.g., success of mitigation strategies)
 
-🤝 Credits
+## 🤝 Credits
 
 Created by Kate Mason as part of a machine learning portfolio integrating technical analysis with climate-aware data interpretation.
