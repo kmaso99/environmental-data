@@ -1,9 +1,5 @@
 # Analysis of Sea Ice Levels
 
-## Question
-
-How has sea‑ice extent changed over time, and do the Northern and Southern Hemispheres show different long‑term trends, seasonal structure, or evidence of regime shifts?
-
 A reproducible environmental time-series analysis exploring **sea ice variability and long-term change**, with an emphasis on **trend characterization** and **change-point detection** to identify potential regime shifts.
 
 Notebook:
