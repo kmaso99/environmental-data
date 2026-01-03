@@ -1,50 +1,48 @@
-# 🚀 SpaceX Falcon 9 Landing Prediction
-**Overview**
+# Analysis of Sea Ice Levels
 
-_This project applies machine learning techniques to predict successful landings of the SpaceX Falcon 9 first-stage booster. While rooted in aerospace, the workflow highlights data strategies that can be adapted to climate policy—such as classification modeling, feature engineering, and predictive analytics._
+A reproducible environmental time-series analysis exploring **sea ice variability and long-term change**, with an emphasis on **trend characterization** and **change-point detection** to identify potential regime shifts.
 
-## 🔍 Climate Relevance
-Demonstrates methods relevant to greenhouse gas forecasting, transportation emissions modeling, and spatially aware policy design.
-Serves as a transferable template for understanding technological efficiency, resource optimization, and decision-making under uncertainty.
+Notebook:
+https://github.com/kmaso99/environmental-data/blob/main/Analysis%20of%20Sea%20Ice%20Levels.ipynb
 
-## 💻 Tech Stack
-- Python: pandas, scikit-learn, matplotlib, seaborn
-- Jupyter Notebook
-- GridSearchCV for model tuning
-- Confusion matrix and visualizations for interpretability
+---
 
-## 📊 Key Features
+## What this project does
 
-- Data wrangling and preprocessing
+This project analyzes sea ice time series to:
+- visualize changes over time and summarize key patterns
+- quantify shifts in behavior using **change-point detection**
+- communicate results clearly with plots and interpretable outputs
 
-- Feature selection and transformation
+The goal is to provide a clean, reviewable workflow that could slot into a broader “environmental intelligence” toolkit.
 
-- Multiple classification models (Logistic Regression, SVM, Decision Trees)
+---
 
-- Hyperparameter tuning via cross-validation
+## Methods used
 
-- Confusion matrix heatmaps for performance insight
+This notebook uses:
+- exploratory time-series visualization and summary statistics
+- change-point detection with `ruptures` (regime shift style analysis)
+- standard Python data science tooling for reproducible plots and iteration
 
-## 🌱 Extension Opportunities
+---
 
-- Adapt modeling workflow to EPA emissions data
+## Tech stack
 
-- Integrate geospatial layers for launch site analysis or regional emissions
+Python: `pandas`, `numpy`
+Visualization: `matplotlib`, `seaborn`
+Time-series change detection: `ruptures`
 
-- Extend classification to environmental outcomes (e.g., success of mitigation strategies)
+---
 
-## 🤝 Credits
-
-_Created by Kate Mason as part of a machine learning portfolio integrating technical analysis with climate-aware data interpretation._
-
-## 🔧 How to Run
-- Clone the repository
-
-- Install dependencies:
+## How to run locally
 
 ```bash
-  pip install pandas scikit-learn matplotlib seaborn
+git clone https://github.com/kmaso99/environmental-data.git
+cd environmental-data
 
-- Open the notebook using JupyterLite or locally with Jupyter Notebook
+python -m venv .venv
+source .venv/bin/activate
 
-- Run cells sequentially to explore the model pipeline
+pip install pandas numpy matplotlib seaborn ruptures jupyter
+jupyter lab
