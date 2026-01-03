@@ -1,3 +1,0 @@
-mkdir -p app models .github/workflows tests
-touch app/main.py app/model.py requirements.txt Dockerfile .dockerignore \
-      .github/workflows/ci.yml tests/test_health.py
