@@ -33,9 +33,9 @@ This notebook uses:
 
 ## Tech stack
 
-Python: `pandas`, `numpy`
-Visualization: `matplotlib`, `seaborn`
-Time-series change detection: `ruptures`
+- Python: `pandas`, `numpy`
+- Visualization: `matplotlib`, `seaborn`
+- Time-series change detection: `ruptures`
 
 ---
 
