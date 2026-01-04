@@ -1,6 +1,11 @@
+![Build Status](https://github.com/kmaso99/environmental-data/actions/workflows/ci.yml/badge.svg)
+![Docker](https://img.shields.io/badge/container-docker-blue)
+[![API Docs](https://img.shields.io/badge/docs-FastAPI-green)](http://localhost:8000/docs)
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+
 # 🐾 Wildlife Image Classification API
 
-FastAPI + PyTorch microservice for wildlife species classification
+Production-ready-ish FastAPI + PyTorch microservice for wildlife species classification
 
 ---
 
