@@ -12,3 +12,8 @@ jobs:
           python-version: "3.10"
       - run: pip install -r requirements.txt
       - run: pytest -q
+- name: Run tests
+  run: |
+    cd Biodata-Projects/wildlife-classification.api
+    pip install -r requirements.txt
+    pytest -q
