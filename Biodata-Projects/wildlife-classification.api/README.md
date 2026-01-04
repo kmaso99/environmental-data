@@ -1,4 +1,4 @@
-![Wildlife Image Classification API Banner](https://www.notion.so/Getting-Started-2025991a6f1b80e1afd9ef63ce198852?source=copy_link#2de5991a6f1b80d8972ef2a2419fd537)
+![Wildlife Image Classification API Banner](https://file.notion.so/f/f/08a5991a-6f1b-8172-ac00-000305c3e86b/15fcc87d-ecf5-425c-9f3f-fdf785a12de6/Copilot_20260103_163430.png?table=block&id=2de5991a-6f1b-80d8-972e-f2a2419fd537&spaceId=08a5991a-6f1b-8172-ac00-000305c3e86b&expirationTimestamp=1767571200000&signature=jP9Hx25zf-JOn7UK1_NrqG3v56OiVnJE3cBBMzAgXf4&downloadName=Copilot_20260103_163430.png)
 
 ![Build Status](https://github.com/kmaso99/environmental-data/actions/workflows/ci.yml/badge.svg)
 ![Docker](https://img.shields.io/badge/container-docker-blue)
