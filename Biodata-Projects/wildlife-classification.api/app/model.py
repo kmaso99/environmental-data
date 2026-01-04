@@ -1,41 +1,27 @@
-import io
-from PIL import Image
 import torch
-from torchvision import transforms, models
+from torchvision import models, transforms
+from PIL import Image
 
-# Simple ImageNet labels placeholder (swap with your wildlife labels)
-DEFAULT_CLASSES = [str(i) for i in range(1000)]
+class BirdClassifier:
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    def __init__(self):
+        self.model = models.resnet18()
+        self.model.fc = torch.nn.Linear(self.model.fc.in_features, 10)  # adjust later
+        self.model.load_state_dict(torch.load("models/bird_model.pt", map_location="cpu"))
+        self.model.eval()
 
-# Transfer-learning friendly backbone (swap to efficientnet, etc.)
-_model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
-_model.eval()
-_model.to(device)
+        with open("models/classes.txt") as f:
+            self.classes = [c.strip() for c in f.readlines()]
 
-_preprocess = transforms.Compose([
-    transforms.Resize(256),
-    transforms.CenterCrop(224),
-    transforms.ToTensor(),
-    transforms.Normalize(
-        mean=[0.485, 0.456, 0.406],
-        std=[0.229, 0.224, 0.225],
-    )
-])
+        self.tfms = transforms.Compose([
+            transforms.Resize((224, 224)),
+            transforms.ToTensor(),
+        ])
 
-@torch.inference_mode()
-def predict(image_bytes: bytes, class_names=None):
-    class_names = class_names or DEFAULT_CLASSES
-
-    img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-    x = _preprocess(img).unsqueeze(0).to(device)
-
-    logits = _model(x)
-    probs = torch.softmax(logits, dim=1)[0]
-    conf, idx = torch.max(probs, dim=0)
-
-    return {
-        "class_id": int(idx.item()),
-        "class_name": class_names[int(idx.item())] if int(idx.item()) < len(class_names) else str(int(idx.item())),
-        "confidence": float(conf.item()),
-    }
+    def predict(self, file):
+        img = Image.open(file).convert("RGB")
+        x = self.tfms(img).unsqueeze(0)
+        with torch.no_grad():
+            preds = self.model(x)
+        idx = preds.argmax().item()
+        return self.classes[idx]
