@@ -5,15 +5,33 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-      - run: pip install -r requirements.txt
-      - run: pytest -q
-- name: Run tests
-  run: |
-    cd Biodata-Projects/wildlife-classification.api
-    pip install -r requirements.txt
-    pytest -q
+
+      # Install root-level dependencies ONLY if needed
+      - name: Install root requirements (optional)
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # Move into your project subdirectory
+      - name: Install project dependencies
+        run: |
+          cd Biodata-Projects/wildlife-classification.api
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          cd Biodata-Projects/wildlife-classification.api
+          pytest -q
+
+      - name: Verify dataset structure
+        run: |
+          cd Biodata-Projects/wildlife-classification.api
+          python scripts/verify_data.py
