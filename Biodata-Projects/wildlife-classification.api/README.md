@@ -1,4 +1,4 @@
-![Wildlife Image Classification API Banner](https://file.notion.so/banner.png)
+![Wildlife Image Classification API Banner](https://github.com/kmaso99/environmental-data/blob/main/Biodata-Projects/wildlife-classification.api/banner.png)
 
 ![Build Status](https://github.com/kmaso99/environmental-data/actions/workflows/ci.yml/badge.svg)
 ![Docker](https://img.shields.io/badge/container-docker-blue)
