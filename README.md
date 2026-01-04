@@ -14,27 +14,39 @@ Typical workflows include geospatial joins, raster/vector preprocessing, timeser
 
 ---
 
-## Featured projects (inside this repo)
+## 🌟 Featured Projects (inside this repo)
 
-### 1) Project: Wildlife Image Classification API
-- Goal: Build a deployable image classification API for individual bird identification using ecological field data.
+<details>
+<summary><strong>🐦 Wildlife Image Classification API</strong></summary>
 
-- Data: Bird Individual ID dataset (Ferreira et al. 2020) via GitHub; compatible with GBIF-style wildlife imagery.
+**Goal:** Deploy a lightweight FastAPI service for individual bird identification.  
 
-- Methods: Transfer learning with ResNet18, PyTorch dataloaders, FastAPI inference, CI/CD testing, versioned model exports.
+**Data:** Bird Individual ID dataset (Ferreira et al. 2020).  
 
-- Outputs: Trained model (.pt), class mapping (.json), FastAPI service, benchmark script, reproducible training pipeline.
+**Methods:** Transfer learning (ResNet18), PyTorch dataloaders, FastAPI inference, CI/CD, model versioning. 
 
-### 2) Project: Sea Ice Trend Analysis
-- Goal: Quantify seasonal and long-term changes in Arctic sea ice extent using satellite-derived raster data.
+**Outputs:** Trained model (`.pt`), `classes.json`, API endpoints, benchmark scripts.
 
-- Data: NSIDC Sea Ice Index (via NOAA), Copernicus Arctic datasets.
+🔗 <a href="./wildlife-classification.api">View Project</a>
 
-- Methods: Raster time series analysis, anomaly detection, trend fitting, visual narrative construction.
+</details>
 
-- Outputs: Annotated plots, exploratory notebooks, exportable datasets for downstream modeling.
+---
 
-If you want, I can turn this into a clickable table once you have 2–4 stable subfolders/notebooks you want to highlight.
+<details>
+<summary><strong>🧊 Sea Ice Trend Analysis</strong></summary>
+
+**Goal:** Quantify long‑term and seasonal changes in Arctic sea ice extent. 
+
+**Data:** NSIDC Sea Ice Index (NOAA), Copernicus Arctic datasets.  
+
+**Methods:** Raster time‑series analysis, anomaly detection, trend fitting, geospatial visualization. 
+
+**Outputs:** Annotated plots, exploratory notebooks, exportable datasets.
+
+🔗 <a href="./sea-ice-analysis">View Project</a>
+
+</details>
 
 ---
 
