@@ -1,14 +1,14 @@
-from fastapi import FastAPI, File, UploadFile
-from app.model import predict
+from fastapi import FastAPI, UploadFile
+from model import BirdClassifier
 
-app = FastAPI(title="Wildlife Image Classification API", version="1.0.0")
+app = FastAPI()
+model = BirdClassifier()
 
 @app.get("/health")
 def health():
     return {"status": "ok"}
 
 @app.post("/predict")
-async def predict_endpoint(file: UploadFile = File(...)):
-    image_bytes = await file.read()
-    result = predict(image_bytes)
-    return result
+async def predict(file: UploadFile):
+    pred = model.predict(file.file)
+    return {"prediction": pred}
