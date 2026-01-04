@@ -84,7 +84,7 @@ requirements.txt    Python dependencies
 - For production deployments, pin torch and torchvision versions and consider CPU‑only wheels if running on CPU infrastructure.
 - You can swap in any PyTorch model (ResNet, EfficientNet, ViT, etc.) with minimal changes to the inference pipeline.
 
-🌱 Future Enhancements (Optional)
+## 🌱 Future Enhancements (Optional)
 
 - Add batch inference support
 - Integrate model training notebook or pipeline
