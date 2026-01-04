@@ -2,6 +2,10 @@
 ![Docker](https://img.shields.io/badge/container-docker-blue)
 [![API Docs](https://img.shields.io/badge/docs-FastAPI-green)](http://localhost:8000/docs)
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C)
+![GitHub Actions](https://img.shields.io/badge/CI-GitHub%20Actions-blue)
+![Docker](https://img.shields.io/badge/Docker-Ready-0db7ed)
 
 # 🐾 Wildlife Image Classification API
 
