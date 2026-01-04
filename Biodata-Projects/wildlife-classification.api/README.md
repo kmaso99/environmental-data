@@ -1,5 +1,10 @@
+<!-- Project Banner --> 
+<p align="center">
 ![Wildlife Image Classification API Banner](https://github.com/kmaso99/environmental-data/blob/main/Biodata-Projects/wildlife-classification.api/banner.jpg)
+</p>
 
+<!-- Badges --> 
+<p align="center">
 ![Build Status](https://github.com/kmaso99/environmental-data/actions/workflows/ci.yml/badge.svg)
 ![Docker](https://img.shields.io/badge/container-docker-blue)
 [![API Docs](https://img.shields.io/badge/docs-FastAPI-green)](http://localhost:8000/docs)
@@ -8,6 +13,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C)
 ![GitHub Actions](https://img.shields.io/badge/CI-GitHub%20Actions-blue)
 ![Docker](https://img.shields.io/badge/Docker-Ready-0db7ed)
+</p>
 
 # 🐾 Wildlife Image Classification API
 
