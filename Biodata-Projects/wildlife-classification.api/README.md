@@ -1,3 +1,5 @@
+![Wildlife Image Classification API Banner](https://www.notion.so/Getting-Started-2025991a6f1b80e1afd9ef63ce198852?source=copy_link#2de5991a6f1b80d8972ef2a2419fd537)
+
 ![Build Status](https://github.com/kmaso99/environmental-data/actions/workflows/ci.yml/badge.svg)
 ![Docker](https://img.shields.io/badge/container-docker-blue)
 [![API Docs](https://img.shields.io/badge/docs-FastAPI-green)](http://localhost:8000/docs)
