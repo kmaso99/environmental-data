@@ -37,6 +37,8 @@ Then open:
 - http://localhost:8000/docs (Swagger UI)
 - http://localhost:8000/health (health check)
 
+---
+
 ## 🧪 Quick test via curl
 
 **Health check:**
