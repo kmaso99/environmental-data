@@ -13,6 +13,8 @@
 
 Production-ready-ish FastAPI + PyTorch microservice for wildlife species classification, specifically birds
 
+For full citation details, see the “Credits & Citation” section at the bottom of this README.
+
 ---
 
 ## 📌 Overview
