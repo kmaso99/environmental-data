@@ -5,33 +5,27 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Biodata-Projects/wildlife-classification.api
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.11"
 
-      # Install root-level dependencies ONLY if needed
-      - name: Install root requirements (optional)
-        run: |
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
 
-      # Move into your project subdirectory
       - name: Install project dependencies
-        run: |
-          cd Biodata-Projects/wildlife-classification.api
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run tests
-        run: |
-          cd Biodata-Projects/wildlife-classification.api
-          pytest -q
+        run: pytest -q
 
       - name: Verify dataset structure
-        run: |
-          cd Biodata-Projects/wildlife-classification.api
-          python scripts/verify_data.py
+        run: python scripts/verify_data.py
