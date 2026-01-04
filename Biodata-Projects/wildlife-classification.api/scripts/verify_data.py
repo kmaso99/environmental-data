@@ -3,31 +3,41 @@ Verify dataset integrity before training.
 
 Checks:
 - train/val/test folders exist
-- each class has images
-- no empty directories
+- each split contains class directories
+- each class directory has images
 """
 
+import os
 from pathlib import Path
 
-DATA_DIR = Path("data/birds")
+DEFAULT_DATA_DIR = Path("data/birds")
+IMG_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
 
-def verify():
+def iter_images(folder: Path):
+    for p in folder.rglob("*"):
+        if p.is_file() and p.suffix.lower() in IMG_EXTS:
+            yield p
+
+def verify(data_dir: Path) -> None:
     required = ["train", "val", "test"]
+
     for split in required:
-        split_path = DATA_DIR / split
+        split_path = data_dir / split
         if not split_path.exists():
-            raise FileNotFoundError(f"Missing split: {split_path}")
+            raise FileNotFoundError("Missing split: " + str(split_path))
 
-        classes = list(split_path.iterdir())
-        if not classes:
-            raise ValueError(f"No classes found in {split_path}")
+        class_dirs = [p for p in split_path.iterdir() if p.is_dir()]
+        if not class_dirs:
+            raise ValueError("No class directories found in " + str(split_path))
 
-        for cls in classes:
-            images = list(cls.glob("*.jpg"))
-            if not images:
-                raise ValueError(f"Class {cls.name} has no images in {split}")
+        for cls_dir in class_dirs:
+            imgs = list(iter_images(cls_dir))
+            if not imgs:
+                raise ValueError("Class " + cls_dir.name + " has no images in " + split)
 
-    print("Dataset verification passed.")
+    print("Dataset verification passed at " + str(data_dir))
 
 if __name__ == "__main__":
-    verify()
+    data_dir_str = os.environ.get("DATA_DIR", str(DEFAULT_DATA_DIR))
+    data_dir = Path(data_dir_str)
+    verify(data_dir)
