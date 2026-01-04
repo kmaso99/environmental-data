@@ -16,17 +16,23 @@ Typical workflows include geospatial joins, raster/vector preprocessing, timeser
 
 ## Featured projects (inside this repo)
 
-### 1) Project: (Title)
-Goal: one sentence on the question you answer and why it matters.
-Data: (source names, e.g., NOAA, USGS, GBIF, Copernicus, EPA)
-Methods: (e.g., spatial joins, raster processing, trend analysis, baseline models)
-Outputs: (map(s), short report, notebook, exported dataset)
+### 1) Project: Wildlife Image Classification API
+- Goal: Build a deployable image classification API for individual bird identification using ecological field data.
 
-### 2) Project: (Title)
-Goal:
-Data:
-Methods:
-Outputs:
+- Data: Bird Individual ID dataset (Ferreira et al. 2020) via GitHub; compatible with GBIF-style wildlife imagery.
+
+- Methods: Transfer learning with ResNet18, PyTorch dataloaders, FastAPI inference, CI/CD testing, versioned model exports.
+
+- Outputs: Trained model (.pt), class mapping (.json), FastAPI service, benchmark script, reproducible training pipeline.
+
+### 2) Project: Sea Ice Trend Analysis
+- Goal: Quantify seasonal and long-term changes in Arctic sea ice extent using satellite-derived raster data.
+
+- Data: NSIDC Sea Ice Index (via NOAA), Copernicus Arctic datasets.
+
+- Methods: Raster time series analysis, anomaly detection, trend fitting, visual narrative construction.
+
+- Outputs: Annotated plots, exploratory notebooks, exportable datasets for downstream modeling.
 
 If you want, I can turn this into a clickable table once you have 2–4 stable subfolders/notebooks you want to highlight.
 
