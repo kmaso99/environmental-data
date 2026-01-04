@@ -109,19 +109,40 @@ requirements.txt    Python dependencies
 
 ## 📚 Credits & Citation
 
-**Dataset:** Bird Individual ID  
+### 🐦 Dataset
+[![Dataset](https://img.shields.io/badge/Dataset-Bird%20Individual%20ID-green)](https://github.com/AndreCFerreira/Bird_individualID)
+
+This project uses the **Bird Individual ID** dataset:
+
 Ferreira, A. C., Silva, L. R., Renna, F., Brandl, H. B., Renoult, J. P., Farine, D. R., Covas, R., & Doutrelant, C. (2020).  
 *Deep learning-based methods for individual recognition in small birds.*  
 Methods in Ecology and Evolution.
 
 If you use this dataset in academic or published work, please cite the authors:
 
+```text
 @article{deeplearningbirds,
   title={Deep learning-based methods for individual recognition in small birds},
   author={André C. Ferreira, Liliana R. Silva, Francesco Renna, Hanja B. Brandl, Julien P. Renoult, Damien R. Farine, Rita Covas and Claire Doutrelant},
   journal={Methods in Ecology and Evolution},
   year={2020}
 }
+```
 
 **Dataset Repository:** https://github.com/AndreCFerreira/Bird_individualID  
 **Contact:** André C. Ferreira (via GitHub profile)
+
+## ✍️ How to Cite This Project
+
+If you use this codebase, training pipeline, or API design in your own work, please cite:
+
+Mason, K. (2026). Wildlife Image Classification API: A FastAPI + PyTorch service for single-species bird identification. GitHub repository: https://github.com/kmaso99/environmental-data
+
+```text
+@misc{mason2026wildlifeapi,
+author       = {Kate Mason},
+title        = {Wildlife Image Classification API: A FastAPI + PyTorch service for single-species bird identification},
+year         = {2026},
+howpublished = {\url{https://github.com/kmaso99/environmental-data}},
+}
+```
