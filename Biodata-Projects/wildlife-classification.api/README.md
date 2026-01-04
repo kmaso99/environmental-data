@@ -11,7 +11,7 @@
 
 # 🐾 Wildlife Image Classification API
 
-Production-ready-ish FastAPI + PyTorch microservice for wildlife species classification
+Production-ready-ish FastAPI + PyTorch microservice for wildlife species classification, specifically birds
 
 ---
 
@@ -102,3 +102,24 @@ requirements.txt    Python dependencies
 - Add test coverage reporting
 - Deploy to AWS/GCP/Azure with Terraform or Docker Compose
 - Add caching for repeated predictions
+
+---
+
+## 📚 Credits & Citation
+
+**Dataset:** Bird Individual ID  
+Ferreira, A. C., Silva, L. R., Renna, F., Brandl, H. B., Renoult, J. P., Farine, D. R., Covas, R., & Doutrelant, C. (2020).  
+*Deep learning-based methods for individual recognition in small birds.*  
+Methods in Ecology and Evolution.
+
+If you use this dataset in academic or published work, please cite the authors:
+
+@article{deeplearningbirds,
+  title={Deep learning-based methods for individual recognition in small birds},
+  author={André C. Ferreira, Liliana R. Silva, Francesco Renna, Hanja B. Brandl, Julien P. Renoult, Damien R. Farine, Rita Covas and Claire Doutrelant},
+  journal={Methods in Ecology and Evolution},
+  year={2020}
+}
+
+**Dataset Repository:** https://github.com/AndreCFerreira/Bird_individualID  
+**Contact:** André C. Ferreira (via GitHub profile)
